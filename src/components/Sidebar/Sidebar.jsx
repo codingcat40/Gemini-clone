@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="flex flex-row">
           {/* <img src={assets.plus_icon} className="size-8" alt="" /> */}
           <AddIcon className="size-16"/>
-          <p>New chat</p>
+          <p>New chat </p>
         </div>
       </div>
 
