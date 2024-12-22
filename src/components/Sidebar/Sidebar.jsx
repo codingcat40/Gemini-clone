@@ -36,11 +36,13 @@ const Sidebar = () => {
 
           {toggleSidebar && (
             <div>
-            <p className="text-gray-500 text-sm font-medium mt-4">Recent</p>
-            <Button className="flex flex-row items-start w-[12rem]">
+              <p className="text-gray-500 text-sm font-medium mt-4">Recent</p>
+              <Button className="flex flex-row items-start w-[12rem]">
                 <img src={assets.message_icon} alt="" className="w-8 h-8" />
-                <p className="text-black text-xs font-light w-[7rem]">what is react ?</p>
-            </Button>
+                <p className="text-black text-xs font-light w-[7rem]">
+                  what is react ?
+                </p>
+              </Button>
             </div>
           )}
         </div>
@@ -51,22 +53,27 @@ const Sidebar = () => {
           <Button className="flex flex-row gap-2 items-center h-8">
             <img src={assets.question_icon} className="w-[1rem]" alt="Help" />
             {toggleSidebar && (
-              <p className="text-black text-sm font-medium">Help</p>
+              <>
+                <p className="text-black text-sm font-medium">Help</p>
+                <span className="w-2 h-2 bg-red-500 rounded-full ml-auto"></span>
+              </>
             )}
-            <span className="w-2 h-2 bg-red-500 rounded-full ml-auto"></span>
           </Button>
 
-          <Button className="flex flex-row gap-2 items-center h-8">
+          {/* <Button className="flex flex-row gap-2 items-center h-8">
             <img
               src={assets.history_icon}
               className="w-[1rem]"
               alt="Activity"
             />
             {toggleSidebar && (
-              <p className="text-black text-sm font-medium">Activity</p>
+              <>
+                <p className="text-black text-sm font-medium">Activity</p>
+                <span className="w-2 h-2 bg-red-500 rounded-full ml-auto"></span>
+              </>
             )}
             <span className="ml-auto"></span>
-          </Button>
+          </Button> */}
 
           <Button className="flex flex-row gap-2 items-center h-8">
             <img
@@ -75,9 +82,11 @@ const Sidebar = () => {
               alt="Settings"
             />
             {toggleSidebar && (
-              <p className="text-black text-sm font-medium">Settings</p>
+              <>
+                <p className="text-black text-sm font-medium">Settings</p>
+                <span className="w-2 h-2 bg-red-500 rounded-full ml-auto"></span>
+              </>
             )}
-            <span className="w-2 h-2 bg-red-500 rounded-full ml-auto"></span>
           </Button>
         </div>
       </div>
