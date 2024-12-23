@@ -16,35 +16,50 @@ const Main = () => {
           <p>How can I help you today?</p>
         </div>
 
-        <div>
-          <div>
-            <p>
+        <div className="grid grid-cols-4 gap-4 p-5">
+          <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+            <p className="text-[#585858] text-[1rem]">
               Suggest Beautiful places to see an upcoming road trip...
             </p>
-            <img src={assets.compass_icon} alt="" />
+            <img className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2" src={assets.compass_icon} alt="" />
           </div>
 
-          <div>
-            <p>
+          <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+            <p className="text-[#585858] text-[1rem]">
               Briefly summarize this concept: urban planning
             </p>
-            <img src={assets.bulb_icon} alt="" />
+            <img className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2" src={assets.bulb_icon} alt="" />
           </div>
 
-          <div>
-            <p>
+          <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+            <p className="text-[#585858] text-[1rem]">
               Brainstorm team bonding activities for our work retreat
             </p>
-            <img src={assets.message_icon} alt="" />
+            <img className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2" src={assets.message_icon} alt="" />
           </div>
 
-          <div>
-            <p>
+          <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+            <p className="text-[#585858] text-[1rem]">
               Improve the readability of the following code
             </p>
-            <img src={assets.code_icon} alt="" />
+            <img className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2" src={assets.code_icon} alt="" />
           </div>
         </div>
+
+      {/* main bottom */}
+        <div className="absolute bottom-0 w-[100%] max-w-[56rem] m-auto px-5 py-0 ">
+          <div className="flex items-center justify-between gap-5 bg-[#f0f4f9] px-2 py-5 rounded-[50px]">
+            <input className="flex-1 bg-transparent border-none outline-none p-2 text-[1rem]" type="text" placeholder="Enter a prompt here" />
+              <div className="flex items-center gap-4">
+              <img className="w-6 cursor-pointer" src={assets.gallery_icon} alt="" />
+              <img className="w-6 cursor-pointer" src={assets.mic_icon} alt="" />
+              <img className="w-6 cursor-pointer" src={assets.send_icon} alt="" />
+              </div>
+          </div>
+          <p className="text-[1rem] my-4 mx-auto text-center font-normal">Gemini may also display inaccurate information, including about people, so double check its response, your privacy and gemini apps </p>
+
+        </div>
+
       </div>
     </div>
   );
