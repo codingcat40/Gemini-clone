@@ -1,10 +1,17 @@
 import { Button } from "@mui/material";
 import { assets } from "../../assets/assets";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context } from "../../context/context";
 
 const Sidebar = () => {
   const [toggleSidebar, setSidebarToggle] = useState(false);
-
+  const { onSent, previousPrompt, setRecentPrompt } = useContext(Context);
+  
+  const loadPrompt = async (prompt) => {
+    setRecentPrompt(prompt)
+    await onSent(prompt)
+  }
+  
   return (
     <div
       className={`bg-slate-100 h-screen flex flex-col justify-between p-4 transition-all duration-300 ${
@@ -37,12 +44,16 @@ const Sidebar = () => {
           {toggleSidebar && (
             <div>
               <p className="text-gray-500 text-sm font-medium mt-4">Recent</p>
-              <Button className="flex flex-row items-start w-[12rem]">
-                <img src={assets.message_icon} alt="" className="w-8 h-8" />
-                <p className="text-black text-xs font-light w-[7rem]">
-                  what is react ?
-                </p>
-              </Button>
+              {previousPrompt.map((prompt, index) => {
+                return (
+                  <Button onClick={()=>loadPrompt(prompt)} className="flex flex-row items-start w-[12rem]" key={index}>
+                    <img src={assets.message_icon} alt="" className="w-8 h-8" />
+                    <p className="text-black text-xs font-light w-[7rem] truncate">
+                      {prompt}...
+                    </p>
+                  </Button>
+                );
+              })}
             </div>
           )}
         </div>
