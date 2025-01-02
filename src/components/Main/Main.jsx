@@ -25,7 +25,7 @@ const Main = () => {
           <>
             <div className="mx-12 my-0 text-gray-400 text-4xl p-5">
               <p>
-                <span className="bg-gradient-to-r from-blue-400 to-red-300">
+                <span className="text-red-300">
                   {" "}
                   Hello, Naman :)
                 </span>
@@ -36,7 +36,7 @@ const Main = () => {
             <div className="grid grid-cols-4 gap-4 p-5">
               <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
                 <p className="text-[#585858] text-[1rem]">
-                  Suggest Beautiful places to see an upcoming road trip...
+                  Suggest Beautiful places to see an upcoming world trip...
                 </p>
                 <img
                   className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2"
@@ -47,7 +47,7 @@ const Main = () => {
 
               <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
                 <p className="text-[#585858] text-[1rem]">
-                  Briefly summarize this concept: urban planning
+                  How can I design Gemini Clone with Tailwind CSS framework
                 </p>
                 <img
                   className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2"
@@ -69,7 +69,7 @@ const Main = () => {
 
               <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
                 <p className="text-[#585858] text-[1rem]">
-                  Improve the readability of the following code
+                  Normal CSS vs Tailwind
                 </p>
                 <img
                   className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2"
