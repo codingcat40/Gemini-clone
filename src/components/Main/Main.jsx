@@ -80,7 +80,7 @@ const Main = () => {
             </div>
           </>
         ) : (
-          <div className="px-[5%] py-0 max-h-[70vh] overflow-y-auto ">
+          <div className="px-[5%] py-0 max-h-[70vh] overflow-y-scroll ">
             <div className="mx-0 my-10 flex items-center gap-5">
               {" "}
               <img src={assets.user_icon} className="w-12 rounded-md" alt="" />
@@ -103,11 +103,12 @@ const Main = () => {
         )}
 
         {/* main bottom */}
-        <div className="absolute bottom-0 w-[100%] max-w-[56rem] m-auto px-5 py-0 ">
-          <div className="flex items-center justify-between gap-5 bg-[#f0f4f9] px-2 py-5 rounded-[50px]">
+        <div className="absolute bottom-0 w-full max-w-[60rem] m-auto px-5 py-0 ">
+          <div className="flex items-center justify-between gap-5 bg-[#f0f4f9] p-1 rounded-[50px]">
             <input
               className="flex-1 bg-transparent border-none outline-none p-2 text-[1rem]"
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => { if(e.key === 'Enter') { onSent(); e.preventDefault();}}}
               value={input}
               type="text"
               placeholder="Enter a prompt here"
