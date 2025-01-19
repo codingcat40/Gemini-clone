@@ -14,9 +14,9 @@ const Sidebar = () => {
   
   return (
     <div
-      className={`bg-slate-100 h-screen flex flex-col justify-between p-4 transition-all duration-300 ${
+      className={`bg-slate-100 h-screen flex flex-col justify-between p-4 transition-all duration-300 min-h-full ${
         toggleSidebar
-          ? "min-w-[20rem] max-w-[20rem]"
+          ? "min-w-[13rem] max-w-[20rem]"
           : "min-w-[7rem] max-w-[7rem]"
       }`}
     >
