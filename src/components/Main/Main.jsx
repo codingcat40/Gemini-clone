@@ -14,7 +14,7 @@ const Main = () => {
   } = useContext(Context);
 
   return (
-    <div className="text-black relative w-full">
+    <div className="text-black relative w-screen h-screen">
       <div className="flex items-center justify-between p-5 text-gray-500">
         <p>Gemini</p>
         <img className="w-10 rounded-lg" src={assets.user_icon} alt="" />
@@ -33,8 +33,10 @@ const Main = () => {
               <p>How can I help you today?</p>
             </div>
 
-            <div className="grid grid-cols-4 gap-4 p-5">
-              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+            <div className="flex flex-grow gap-2 p-5">
+              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea] max-w-[12rem] min-w-[9rem]"
+              onClick={()=>(setInput("Suggest Beautiful places to see an upcoming world trip..."))}
+              >
                 <p className="text-[#585858] text-[1rem]">
                   Suggest Beautiful places to see an upcoming world trip...
                 </p>
@@ -45,7 +47,9 @@ const Main = () => {
                 />
               </div>
 
-              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea] max-w-[12rem] min-w-[9rem]"
+              onClick={()=>(setInput("How can I design Gemini Clone with Tailwind CSS framework"))}
+              >
                 <p className="text-[#585858] text-[1rem]">
                   How can I design Gemini Clone with Tailwind CSS framework
                 </p>
@@ -55,19 +59,8 @@ const Main = () => {
                   alt=""
                 />
               </div>
-
-              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
-                <p className="text-[#585858] text-[1rem]">
-                  Brainstorm team bonding activities for our work retreat
-                </p>
-                <img
-                  className="absolute w-8 p-1 bg-white rounded-md bottom-2 right-2"
-                  src={assets.message_icon}
-                  alt=""
-                />
-              </div>
-
-              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea]">
+              <div className="h-[13rem] p-4 bg-[#f0f4f9] rounded-md relative cursor-pointer hover:bg-[#dfe4ea] max-w-[12rem] min-w-[8rem]"  onClick={()=>(setInput("Normal CSS Vs Tailwind"))}
+              >
                 <p className="text-[#585858] text-[1rem]">
                   Normal CSS vs Tailwind
                 </p>
